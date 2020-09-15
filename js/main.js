@@ -20,7 +20,7 @@ $(document).ready(function() {
     };
     if (document.getElementById("service-select")) {
         $('select').niceSelect();
-    };    
+    };
 
     //------- Lightbox  js --------//  
 
@@ -41,10 +41,10 @@ $(document).ready(function() {
 
     //------- Datepicker  js --------//  
 
-      $( function() {
-        $( "#datepicker" ).datepicker();
-        $( "#datepicker2" ).datepicker();
-      } );
+    $(function() {
+        $("#datepicker").datepicker();
+        $("#datepicker2").datepicker();
+    });
 
 
     //------- Superfist nav menu  js --------//  
@@ -69,7 +69,7 @@ $(document).ready(function() {
     });
 
 
-     $(document).on('click', '.accordion > dt > a', function(e) {
+    $(document).on('click', '.accordion > dt > a', function(e) {
 
         var current = $(this).parent().next("dd");
         $(this).parents(".accordion").find("dt > a").removeClass("active");
@@ -84,26 +84,26 @@ $(document).ready(function() {
     //------- Tabs Js --------//  
     if (document.getElementById("horizontalTab")) {
 
-    $('#horizontalTab').jqTabs({
-        direction: 'horizontal',
-        duration: 200
-    });
-    
-    };  
+        $('#horizontalTab').jqTabs({
+            direction: 'horizontal',
+            duration: 200
+        });
+
+    };
 
 
     //------- Owl Carusel  js --------//  
 
 
     $('.active-popular-carusel').owlCarousel({
-        items:4,
+        items: 4,
         margin: 30,
-        loop:true,
+        loop: true,
         dots: true,
         autoplayHoverPause: true,
-        smartSpeed:650,         
-        autoplay:true,      
-            responsive: {
+        smartSpeed: 650,
+        autoplay: true,
+        responsive: {
             0: {
                 items: 1
             },
@@ -114,20 +114,20 @@ $(document).ready(function() {
                 items: 2,
             },
             992: {
-                items:4
+                items: 4
             }
         }
     });
 
     $('.active-upcoming-event-carusel').owlCarousel({
-        items:2,
+        items: 2,
         margin: 30,
-        loop:true,
+        loop: true,
         dots: true,
         autoplayHoverPause: true,
-        smartSpeed:650,         
-        autoplay:true,      
-            responsive: {
+        smartSpeed: 650,
+        autoplay: true,
+        responsive: {
             0: {
                 items: 1
             },
@@ -142,14 +142,14 @@ $(document).ready(function() {
 
 
     $('.active-review-carusel').owlCarousel({
-        items:2,
+        items: 2,
         margin: 30,
-        loop:true,
+        loop: true,
         dots: true,
         autoplayHoverPause: true,
-        smartSpeed:650,         
-        autoplay:true,      
-            responsive: {
+        smartSpeed: 650,
+        autoplay: true,
+        responsive: {
             0: {
                 items: 1
             },
@@ -189,7 +189,7 @@ $(document).ready(function() {
             $('#mobile-body-overly').toggle();
         });
 
-            $(document).on('click', function(e) {
+        $(document).on('click', function(e) {
             var container = $("#mobile-nav, #mobile-nav-toggle");
             if (!container.is(e.target) && container.has(e.target).length === 0) {
                 if ($('body').hasClass('mobile-nav-active')) {
@@ -283,8 +283,8 @@ $(document).ready(function() {
 
         function init() {
             var mapOptions = {
-                zoom: 11,
-                center: new google.maps.LatLng(40.6700, -73.9400), // New York
+                zoom: 15,
+                center: new google.maps.LatLng(0.460592, 33.219542), // New York
                 styles: [{
                     "featureType": "water",
                     "elementType": "geometry",
@@ -405,9 +405,9 @@ $(document).ready(function() {
             var mapElement = document.getElementById('map');
             var map = new google.maps.Map(mapElement, mapOptions);
             var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.6700, -73.9400),
+                position: new google.maps.LatLng(0.460592, 33.219542),
                 map: map,
-                title: 'Snazzy!'
+                title: 'Jinja Progressive Academy (JIPRA)'
             });
         }
     }
